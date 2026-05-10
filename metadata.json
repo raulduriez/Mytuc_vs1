@@ -1,0 +1,6 @@
+{
+  "name": "MyTuc Managua Unificado",
+  "description": "Plataforma integral de transporte colectivo para Managua: gestión administrativa, control de despacho, monitoreo de conductores y radar de buses en tiempo real para usuarios públicos.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["Rastreo en Tiempo Real", "Gestión de Flota", "Información de Transporte Público"]
+}

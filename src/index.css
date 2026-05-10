@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-1000: #020617;
+  --color-immersive-bg: #050608;
+  --color-emerald-accent: #10b981;
+  --color-blue-accent: #3b82f6;
+}
+
+@layer base {
+  body {
+    @apply bg-immersive-bg text-slate-100 selection:bg-emerald-500/30;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+  
+  .glass-hud {
+    @apply bg-slate-900/80 backdrop-blur-md border border-slate-700/50 shadow-2xl;
+  }
+
+  .accent-glow-blue {
+    @apply shadow-[0_0_50px_rgba(59,130,246,0.3)];
+  }
+
+  .accent-glow-emerald {
+    @apply shadow-[0_0_50px_rgba(16,185,129,0.3)];
+  }
+
+  .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .invisible-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-800 rounded-full;
+  }
+
+  .dark-popup .leaflet-popup-content-wrapper {
+    @apply bg-slate-900 text-white border border-slate-700 rounded-xl shadow-2xl;
+  }
+  .dark-popup .leaflet-popup-tip {
+    @apply bg-slate-900;
+  }
+
+  @keyframes sonar {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(3.5); opacity: 0; }
+  }
+  .sonar-wave {
+    animation: sonar 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
